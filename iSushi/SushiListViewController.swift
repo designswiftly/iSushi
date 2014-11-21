@@ -9,10 +9,22 @@
 import Foundation
 import UIKit
 
-class SushiListViewController : UITableViewController {
+class SushiListViewController : UITableViewController, ColorPickerProtocol{
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.performSegueWithIdentifier("MasterToDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier! == "ColorPicker" {
+            let navController = segue.destinationViewController as UINavigationController
+            let picker = navController.topViewController as ColorPickerViewController
+            picker.delegate = self
+        }
+    }
+    
+    func didPickColor(red: Float, green: Float, blue: Float) {
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(1.0))
     }
 }

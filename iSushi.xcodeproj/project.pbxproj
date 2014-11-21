@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A3B2981A1F602F0055FD5C /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3B2971A1F602F0055FD5C /* ColorPickerViewController.swift */; };
 		F5FC992E1A1B9A260012FA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC992D1A1B9A260012FA5F /* AppDelegate.swift */; };
 		F5FC99331A1B9A260012FA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5FC99311A1B9A260012FA5F /* Main.storyboard */; };
 		F5FC99351A1B9A260012FA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5FC99341A1B9A260012FA5F /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5A3B2971A1F602F0055FD5C /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		F5FC99281A1B9A260012FA5F /* iSushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FC992C1A1B9A260012FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5FC992D1A1B9A260012FA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,10 +87,11 @@
 			children = (
 				F5FC992D1A1B9A260012FA5F /* AppDelegate.swift */,
 				F5FC99311A1B9A260012FA5F /* Main.storyboard */,
+				F5FC994D1A1B9EB20012FA5F /* SushiListViewController.swift */,
 				F5FC994F1A1BB40C0012FA5F /* CreateSushiOverviewViewController.swift */,
 				F5FC99511A1BBAF20012FA5F /* CreateSushiIngredientsViewController.swift */,
 				F5FC99531A1BBB130012FA5F /* CreateSushiStepsViewController.swift */,
-				F5FC994D1A1B9EB20012FA5F /* SushiListViewController.swift */,
+				F5A3B2971A1F602F0055FD5C /* ColorPickerViewController.swift */,
 				F5FC99341A1B9A260012FA5F /* Images.xcassets */,
 				F5FC99361A1B9A260012FA5F /* LaunchScreen.xib */,
 				F5FC992B1A1B9A260012FA5F /* Supporting Files */,
@@ -223,6 +226,7 @@
 			files = (
 				F5FC99541A1BBB130012FA5F /* CreateSushiStepsViewController.swift in Sources */,
 				F5FC99521A1BBAF20012FA5F /* CreateSushiIngredientsViewController.swift in Sources */,
+				F5A3B2981A1F602F0055FD5C /* ColorPickerViewController.swift in Sources */,
 				F5FC994E1A1B9EB20012FA5F /* SushiListViewController.swift in Sources */,
 				F5FC992E1A1B9A260012FA5F /* AppDelegate.swift in Sources */,
 				F5FC99501A1BB40C0012FA5F /* CreateSushiOverviewViewController.swift in Sources */,
@@ -417,6 +421,7 @@
 				F5FC99491A1B9A260012FA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5FC994A1A1B9A260012FA5F /* Build configuration list for PBXNativeTarget "iSushiTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				F5FC994C1A1B9A260012FA5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

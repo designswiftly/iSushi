@@ -92,6 +92,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sushi List" id="eJ8-1J-WaF">
+                        <barButtonItem key="leftBarButtonItem" title="Customize" id="oVH-7o-JTx">
+                            <connections>
+                                <segue destination="Z4r-fc-fu4" kind="modal" identifier="ColorPicker" id="btd-b0-dbO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kHX-Ug-Rdh">
                             <connections>
                                 <segue destination="AYq-uB-uaL" kind="modal" id="2cR-v1-BSx"/>
@@ -162,6 +167,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khr-9E-gdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7kj-ae-HE8">
+            <objects>
+                <navigationController id="Z4r-fc-fu4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P7H-QA-6vu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qBh-eU-00A" kind="relationship" relationship="rootViewController" id="S1L-fW-Oqj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kZ-DT-Iia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="-1066"/>
+        </scene>
+        <!--Pick a Color-->
+        <scene sceneID="8kp-6n-w9n">
+            <objects>
+                <viewController id="qBh-eU-00A" customClass="ColorPickerViewController" customModule="iSushi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fs7-eW-waS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2XW-SB-SBq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ng8-Hp-9Fe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FTO-xj-coW">
+                                <rect key="frame" x="14" y="178" width="292" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fia-Ou-RGU">
+                                <rect key="frame" x="144" y="129" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-ck-4ob">
+                                <rect key="frame" x="14" y="292" width="292" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greeen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-pP-cc0">
+                                <rect key="frame" x="132" y="243" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sla-JQ-EqE">
+                                <rect key="frame" x="14" y="408" width="292" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo0-Yg-JCs">
+                                <rect key="frame" x="143" y="369" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pick a Color" id="MJe-br-ttq">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="7Ug-7k-1tm">
+                            <connections>
+                                <action selector="onCancel:" destination="qBh-eU-00A" id="r4L-24-kGz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Select" id="dNe-pj-AHt">
+                            <connections>
+                                <action selector="onSelectColor:" destination="qBh-eU-00A" id="rcY-6r-3Q7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blueSlider" destination="sla-JQ-EqE" id="3R4-wO-uy7"/>
+                        <outlet property="greenSlider" destination="FPt-ck-4ob" id="iqe-D5-oFt"/>
+                        <outlet property="redSlider" destination="FTO-xj-coW" id="qaE-bw-UkI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4X-M4-QcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="-1066"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kr6-Dj-mcj">
