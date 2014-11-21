@@ -11,6 +11,10 @@ import UIKit
 
 class SushiListViewController : UITableViewController, ColorPickerProtocol{
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.performSegueWithIdentifier("MasterToDetail", sender: self)
@@ -25,6 +29,8 @@ class SushiListViewController : UITableViewController, ColorPickerProtocol{
     }
     
     func didPickColor(red: Float, green: Float, blue: Float) {
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(1.0))
+        
+        //This will set the tintColor for the navigationBar
+        UINavigationBar.appearance().barTintColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(1.0))
     }
 }
